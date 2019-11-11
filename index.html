@@ -92,6 +92,13 @@
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
       font-size: 100%
     }
+    @media screen and (max-width: 600px) {
+        a {
+        font-family: 'Lato', Verdana, Helvetica, sans-serif;
+        font-size: 32px;
+        }
+    }
+      
     
       
     
@@ -99,17 +106,36 @@
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
       font-size: 100%;
     }
+    @media screen and (max-width: 600px) {
+        strong {
+        font-family: 'Lato', Verdana, Helvetica, sans-serif;
+        font-size: 32px;
+        }
+    }
+      
     
     heading {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
       font-size: 120%;
       font-weight: 700
     }
+   @media screen and (max-width: 600px) {
+        heading {
+        font-family: 'Lato', Verdana, Helvetica, sans-serif;
+        font-size: 38px;
+        }
+    }
     
     papertitle {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
       font-size: 120%;
       font-weight: 700
+    }
+  @media screen and (max-width: 600px) {
+        papertitle {
+        font-family: 'Lato', Verdana, Helvetica, sans-serif;
+        font-size: 38px;
+        }
     }
     
     name {
@@ -314,7 +340,7 @@
                 
 
                   <papertitle>3D Miniscope, aka Randoscope</papertitle>
-                Based on our <a href="https://www.osapublishing.org/viewmedia.cfm?r=1&uri=BRAIN-2019-BT3A.4&seq=0">presentation at OSA Biophotonics 2019</a>
+                <p>Based on our <a href="https://www.osapublishing.org/viewmedia.cfm?r=1&uri=BRAIN-2019-BT3A.4&seq=0">presentation at OSA Biophotonics 2019</a></p>
                    
 
 
@@ -381,7 +407,7 @@
 
                     <br>
 
-                    <strong>Nick Antipa*</strong>, Patrick Oare*,
+                    <strong>Nick Antipa*</strong>, <a> Patrick Oare*</a>,
                   <a href="https://emrahbostan.com/">Emrah Bostan</a>,
                   <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/yirenng.html">Ren Ng</a>,
                   <a href="http://www.laurawaller.com/">Laura Waller</a>
@@ -459,7 +485,7 @@
 
                     <br>
 
-                    <strong>Nick Antipa*</strong>, <a href="https://people.eecs.berkeley.edu/~gkuo/">Grace Kuo*</a>, Reinhard Heckel, Ben Mildenhall,
+                    <strong>Nick Antipa*</strong>, <a href="https://people.eecs.berkeley.edu/~gkuo/">Grace Kuo*</a>, <a>Reinhard Heckel, Ben Mildenhall,</a>
                   <a href="https://emrahbostan.com/">Emrah Bostan</a>,
                   <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/yirenng.html">Ren Ng</a>,
                   <a href="http://www.laurawaller.com/">Laura Waller</a>
@@ -530,7 +556,7 @@
                 </a>
                 <br>
 
-                <strong>Nick Antipa*</strong>, Sylvia Necula,
+                <strong>Nick Antipa*</strong>, <a>Sylvia Necula</a>,
               <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/yirenng.html">Ren Ng</a>,
             <a href="http://www.laurawaller.com/">Laura Waller</a>
             <br>
@@ -540,7 +566,7 @@
             <br>
 
 
-              <p>We capture 4D light field data in a single 2D sensor image by encoding spatio-angular information into a speckle field (causticpattern) through a phase diffuser. Using wave-optics theory and a coherent phase retrieval method, we calibrate the system by measuring the diffuser surface height from through-focus images. Wave-optics theory further informs the design of system geometry such that a purely additive ray-optics model is valid. Light field reconstruction is done using nonlinear matrix inversion methods, including ℓ1 minimization. We demonstrate a prototype system and present empirical results of 4D light field reconstruction and computational refocusing from a single diffuser-encoded 2D image.</p>
+              <p>We capture 4D light field data in a single 2D sensor image by encoding spatio-angular information into a speckle field (causticpattern) through a phase diffuser. Using wave-optics theory and a coherent phase retrieval method, we calibrate the system by measuring the diffuser surface height from through-focus images. Wave-optics theory further informs the design of system geometry such that a purely additive ray-optics model is valid. Light field reconstruction is done using sparsity-constrained iterative inverse methods. We demonstrate a prototype system and present empirical results of 4D light field reconstruction and computational refocusing from a single diffuser-encoded 2D image.</p>
         </tr>
 
 
