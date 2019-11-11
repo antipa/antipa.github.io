@@ -113,10 +113,74 @@
       -webkit-transition: opacity .2s ease-in-out;
     }
 
+    .content{
+        word-wrap:break-word; /*old browsers*/
+        overflow-wrap:break-word;
+    }
+
+    table{
+        width:100%; /*must be set (to any value)*/
+    }
+
+    .overflow-wrap-hack{
+        max-width:600px;
+    }
     
     span.highlight {
       background-color: #ffffd0;
     }
+    * {
+    box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 50%;
+      padding: 10px;
+     
+    }
+    .column_twothirds {
+      float: left;
+      width: 66%;
+      padding: 10px;
+      
+    }
+    .column_right{
+      float: right;
+      width: 66%;
+      padding: 10px;
+      
+    }
+    .column_full {
+      float: center;
+      width: 100%;
+      padding: 10px;
+      
+    }
+    .column_onethird {
+      float: left;
+      width: 33%;
+      padding: 10px;
+      
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 1000px) {
+      .column {
+        width: 100%;
+      }
+    }
+      
+      
+      
   </style>
   <link rel="icon" type="image/png" href="https://people.eecs.berkeley.edu/~kellman/seal_icon.png">
   <title>Nick Antipa</title>
@@ -124,7 +188,7 @@
   <link href="./antipa_files/css" rel="stylesheet" type="text/css">
 </head>
 
-<body class=" hasGoogleVoiceExt">
+<body>
     
 
 <!--   <nav align="center">
@@ -134,47 +198,54 @@
     </ul>
   </nav>
 <hr /> -->
-  <table width="100" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tbody><tr>
-      <td>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tbody><tr>
-            <td width="67%" valign="middle">
-              <p align="center">
-                <name>Nick Antipa</name>
-              </p>
-              <p align="center">
-                <font size="3">nick.antipa@eecs.berkeley.edu </font>
-              </p>
-              <p>
+<table width="62.5%" border="0" align="center" cellspacing="50px" cellpadding="0">
+<tbody>
+<tr>
+<!--<td style="word-break:break-all">-->
+<td class="overflow-wrap-hack">
+<table width="62.5%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tbody>
+<!--        <tr>-->
+        <div class="row">
+<!--            <td width="67%" valign="middle" style="word-break:break-all">-->
+            <div class="column_twothirds">
+                <p align="center">
+                    <name>Nick Antipa</name>
+                </p>
+                <p align="center">
+                    <font size="3">nick.antipa@eecs.berkeley.edu </font>
+                </p>
+                <p>
                 I am a PhD graduate student at UC Berkeley studying Computational Imaging with Laura Waller and Ren Ng. Prior to my PhD work, I spent 5 years working on optical metrology for the National Ignition Facility at Lawrence Livermore National Lab. 
-              </p>
-              <p>
-                
-              </p>
-              <p align="center">
-                <a href="./antipa_files/Nick_CV.pdf">Curriculum Vitae</a> &nbsp;|&nbsp;
-                <!-- <a href="http://github.com/antipa">Github</a> &nbsp;|&nbsp; --> 
-                <a href="https://scholar.google.com/citations?user=15xSd1gAAAAJ&hl=en">Google Scholar</a>
-              </p>
-            </td>
-            <td width="5%">
-              <!-- <img src="topics/portrait_circle.jpg"> -->
-              <img src="./antipa_files/headshot_crop.jpg" style="width:200px;">
-            </td>
-          </tr>
-        </tbody></table>
+                </p>
+                <p align="center">
+                    <a href="./antipa_files/Nick_CV.pdf">Curriculum Vitae</a> &nbsp;|&nbsp;
+                    <!-- <a href="http://github.com/antipa">Github</a> &nbsp;|&nbsp; --> 
+                    <a href="https://scholar.google.com/citations?user=15xSd1gAAAAJ&hl=en">Google Scholar</a>
+                </p>
+<!--            </td>-->
+            </div>
+            <div class="column_onethird">
+<!--            <td width="5%">-->
+            <!-- <img src="topics/portrait_circle.jpg"> -->
+            <img src="./antipa_files/headshot_crop.jpg" style="width:200px;">
+            </div>
+<!--            </td>-->
+        </div>
+<!--        </tr>-->
+    </tbody>
+</table>
         
 
 
 
 
    
-        <table width="100%" align="middle" border="0" cellspacing="0" cellpadding="20">
+        <table width="62.5%" align="middle" border="0" cellspacing="0" cellpadding="20">
             <heading>PhD Research</heading>
             <hr>
           <tbody><tr>
-            <td width="100%" valign="middle">
+            <td width="62.5%" valign="middle">
               
               <p>
                   I am broadly interested in codesign of optical imaging systems and image recovery algorithms. By adding computation to the imaging pipeline, novel hybrid computational imaging system designs emerge that enable modalities not possible with conventional lenses and sensors alone. 
@@ -190,17 +261,19 @@
           </tr>
         </tbody></table>
           
+    
+
 <heading>Recent projects</heading>
 <hr>
             
 
         
-<!--
-  ------------------------Miniscope---------------------------       
+  <!------------------------Miniscope--------------------------- -->     
           
           
+
           
-  <a name="rolling_shutter"></a>
+  <a name="Miniscope"></a>
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" white-space:wrap>
 
           <tbody>
@@ -229,24 +302,28 @@
 
                 
                 
-            <tr>
-                <td valign="top" width="45%">
-                    <br>
-                    <br>
-                    <br>
-                    <br><br>
-                  <img  src="./antipa_files/miniscope_with_quarter_drawing.png" style="width:540px">
-                </td>
-                <td>
-                    <img id="gif-bears" src="./antipa_files/waterbear4_xy_yz_video.gif" style="width:768px">
-                    
-                </td>
-            </tr>
+<!--            <tr>-->
+              <div class="row">
+<!--                <td valign="top" width="45%">-->
+                  <div class="column_onethird">
+                        <br>
+                        <br>
+                        <br>
+                        <br><br>
+                      <img  src="./antipa_files/miniscope_with_quarter_drawing.png" style="width:330px">
+                  </div>
+<!--                </td>-->
+<!--                <td>-->
+                  <div class="column">
+                    <img id="gif-bears" src="./antipa_files/waterbear4_xy_yz_video.gif" style="width:600px">
+                </div>
+<!--                </td>-->
+              </div>
+<!--            </tr>-->
         </tbody>
         </table>
           
           <hr>
--->
           
           
           
@@ -290,21 +367,40 @@
 
                 
                 
-            <tr>
-                <td valign="top" width="45%">
-                  <img  src="./antipa_files/rolling_shutter_schematic.png" style="width:440px">
-                </td>
+            <div class="row">
+<!--                <td valign="top" width="45%">-->
+                <div class="column_full">
+                    <img  src="./antipa_files/rolling_shutter_schematic.png" style="width:320px">
+                    <img src="./antipa_files/dart_apple_raw4web.png" style = "width:320px">
+                    <img src="./antipa_files/dart_apple_220_1320us_270x320_gifbrew.gif" style = "width:320px">
+                </div>
+<!--
+                <div class="column_twothirds">
+                    <img src="./antipa_files/dart_apple_raw4web.png" style = "width:320px">
+                    <img src="./antipa_files/dart_apple_220_1320us_270x320_gifbrew.gif" style = "width:320px">
+                </div>
+-->
+<!--
+                <div class="column">
+                    <img src="./antipa_files/dart_apple_220_1320us_270x320_gifbrew.gif" style = "width:320px">
+                </div>
+-->
+<!--                </td>-->
+                
+<!--
                 <td>
                     <div class="one">
-                        <img id="gif-2" src="./antipa_files/dart_apple_raw4web.png" style="width:640px"
-                             onmouseover="document.getElementById('gif-2').src='./antipa_files/dart_apple_220_1320us_540_640.gif'"
+                        <img id="gif-2" src="./antipa_files/dart_apple_raw4web.png" style="width:320px"
+                             onmouseover="document.getElementById('gif-2').src='./antipa_files/dart_apple_220_1320us_270x320_gifbrew.gif'"
                              onmouseout="document.getElementById('gif-2').src='./antipa_files/dart_apple_raw4web.png'"
                              />
                     <h2><font color="White">Hover to see reconstruction</font></h2>
                         <h4><font color="Black">This entire video is computed from a single sensor exposure!</h4>
                     </div>
                 </td>
-            </tr>
+-->
+<!--            </tr>-->
+              </div>
         </tbody>
         </table>
           
@@ -348,6 +444,7 @@
 
                 
                 
+<!--
             <tr>
                 <td valign="top" width="45%">
                   <img  src="./antipa_files/3d_shift_animation.gif" style="width:453px">
@@ -366,6 +463,14 @@
                     </div>
                 </td>
             </tr>
+--> 
+              <div class="row">
+                  <div class="column_full">
+                      <img  src="./antipa_files/3d_shift_animation.gif" style="width:320px">
+                      <img  src="./antipa_files/fern_for_web_4x.png" style="width:320px">
+                      <img  src="./antipa_files/fern_anim_highres_for_web.gif" style="width:320px">
+                  </div>
+              </div>
         </tbody>
         </table>
           
