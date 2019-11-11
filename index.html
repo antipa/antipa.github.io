@@ -168,7 +168,7 @@
     }
 
     table{
-        width:85%; /*must be set (to any value)*/
+        width:62%; /*must be set (to any value)*/
     }
 
     .overflow-wrap-hack{
@@ -200,6 +200,18 @@
       padding: 10px;
       
     }
+    .column_onefifth {
+      float: left;
+      width: 20%;
+      padding: 10px;
+      
+    }
+  .column_fourfifths {
+      float: left;
+      width: 80%;
+      padding: 10px;
+      
+    }
     .column_right{
       float: right;
       width: 66%;
@@ -210,6 +222,7 @@
       float: center;
       width: 100%;
       padding: 10px;
+    
       
     }
     .column_onethird {
@@ -263,27 +276,36 @@
 <!--        <tr>-->
         <div class="row">
 <!--            <td width="67%" valign="middle" style="word-break:break-all">-->
-            <div class="column_twothirds">
+            <div class="column_fourfifths">
                 <p align="center">
                     <name>Nick Antipa</name>
                 </p>
-                <p align="center">
-                    <font size="3">nick.antipa@eecs.berkeley.edu </font>
+
+<!--
+                <p  align="center">
+                    <img src="./antipa_files/UC-Berkeley-wordmark_blue.svg" style="height:40px;"><font style="font-size: 250%">&nbsp;|&nbsp;</font>
+                    <img src="./antipa_files/UR-logo.svg" style="height:40px;">
                 </p>
-                <p>
-                I am a PhD graduate student at UC Berkeley studying Computational Imaging with Laura Waller and Ren Ng. Prior to my PhD work, I spent 5 years working on optical metrology for the National Ignition Facility at Lawrence Livermore National Lab. 
-                </p>
+-->
                 <p align="center">
-                    <a href="./antipa_files/Nick_CV.pdf">Curriculum Vitae</a> &nbsp;|&nbsp;
+                    <font size="3">nick.antipa@eecs.berkeley.edu </font>&nbsp;|&nbsp;
+                     <a href="./antipa_files/Nick_CV.pdf">Curriculum Vitae</a> &nbsp;|&nbsp;
                     <!-- <a href="http://github.com/antipa">Github</a> &nbsp;|&nbsp; --> 
                     <a href="https://scholar.google.com/citations?user=15xSd1gAAAAJ&hl=en">Google Scholar</a>
                 </p>
+                               
+                <p>
+                I am a PhD graduate student at UC Berkeley studying Computational Imaging with Laura Waller and Ren Ng. Prior to my PhD work, I spent 5 years working on optical metrology for the National Ignition Facility at Lawrence Livermore National Lab. 
+                </p>
+
 <!--            </td>-->
             </div>
-            <div class="column_onethird">
+            <div class="column_onefifth">
 <!--            <td width="5%">-->
             <!-- <img src="topics/portrait_circle.jpg"> -->
+                <br><br>
             <img src="./antipa_files/headshot_crop.jpg" style="width:200px;">
+
             </div>
 <!--            </td>-->
         </div>
@@ -340,7 +362,7 @@
                 
 
                   <papertitle>3D Miniscope, aka Randoscope</papertitle>
-                <p>Based on our <a href="https://www.osapublishing.org/viewmedia.cfm?r=1&uri=BRAIN-2019-BT3A.4&seq=0">presentation at OSA Biophotonics 2019</a></p>
+                
                    
 
 
@@ -352,7 +374,7 @@
 
                   
 
-                  <p>New results from our 3D enabled fluorescent miniscope! By replacing the tube lens with multifocal, random microlenses, we create a compressive imaging system that can capture fluorescent volumes with 3 micron lateral resolution and 10 micron axial at video rates. The video below is a series 3D reconstructions acquired at 16 volumes/second with no moving parts. The sample is a fluorescent stained tardigrade (waterbear). </p>
+                <p><strong>New results from our snapshot 3D fluorescent miniscope!</strong> By replacing the tube lens with multifocal, nonuniformly-spaced microlenses, we create a compressive imaging system that can capture fluorescent volumes with 3 micron lateral resolution and 10 micron axial at video rates. The video below is a series 3D reconstructions acquired at 16 volumes/second with no moving parts. The sample is a fluorescent stained tardigrade (waterbear). This uses a new custom design based on the architecture shown at <a href="https://www.osapublishing.org/viewmedia.cfm?r=1&uri=BRAIN-2019-BT3A.4&seq=0">OSA Biophotonics 2019.</a></p>
             </tr>
               
 
